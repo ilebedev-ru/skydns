@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkyDNS Form</title>
+    <link rel="stylesheet" href="css/style.min.css">
+  </head>
+  <body>
+    <section class="form">
+      <select class="form__select">
+        <option class="form__option">en</option>
+        <option class="form__option">ru</option>
+        <option class="form__option">ar</option>
+      </select>
+      <h1 class="form__title" id="lang_title">Form title</h1>
+      <form action="#" class="form__form-area">
+        <label class="form__label form__label--meduim">
+          <span class="form__input-title" id="lang_name">first name*:</span>
+          <input type="text" class="form__input form__input--big" name="name" required>
+        </label>
+        <label class="form__label form__label--meduim">
+          <span class="form__input-title" id="lang_lastname">last name*:</span>
+          <input class="form__input form__input--big" type="text" name="lastname" required>
+        </label>
+        <label class="form__label">
+          <span class="form__input-title" id="lang_email">email*:</span>
+          <input class="form__input" type="mail" name="email" pattern="^[A-Za-z][a-z0-9._-]+@[a-z0-9._-]+\.[a-z]{2,3}$" required>
+        </label>
+        <label class="form__label">
+          <span class="form__input-title" id="lang_company">company:</span>
+          <input class="form__input" type="text" name="company">
+        </label>
+        <label class="form__label">
+          <span class="form__input-title" id="lang_city">city*:</span>
+          <input class="form__input" type="text" name="city" required>
+        </label>
+        <label class="form__label">
+          <span class="form__input-title" id="lang_message">message*:</span>
+          <textarea class="form__input form__input--textarea" col="10" row="10" name="message" required></textarea>
+        </label>
+        <button type="submit" class="form__button" id="lang_button">Send</button>
+      </form>
+    </section>
+    <script src="js/script.js"></script>
+  </body>
+</html>

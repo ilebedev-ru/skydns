@@ -1,0 +1,147 @@
+.form {
+  width: 100%;
+  max-width: 1170px;
+  min-width: 320px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.form__alert {
+  width: 100%;
+  text-align: center;
+  padding: 20px 0;
+  color: #020067;
+  background-color: #cae3fd;
+
+  &--error {
+    color: #a70404;
+    background-color: #ffa9a9;
+  }
+}
+
+.form__mail-alert {
+  display: block;
+  color: #840202;
+  position: absolute;
+  right: 20px;
+  bottom: -20px;
+  z-index: 9;
+  background-color: #fd9696;
+  padding: 5px;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    left: 20px;
+    top: -20px;
+    border: 10px solid transparent;
+    border-bottom: 10px solid #fd9696;
+   }
+}
+
+.form__form-area {
+  width: 100%;
+  
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.form__select {
+  width: 60px;
+  height: 40px;
+  text-indent: 10px;
+
+  @media (max-width: $desktop-width) {
+    width: auto;
+    height: 28px;
+    border: 0;
+    text-indent: 0;
+    overflow: hidden;
+  }
+}
+
+.form__option {
+  text-align: center;
+
+  @media (max-width: $desktop-width) {
+    display: inline-block;
+    width: 50px;
+    padding: 7px;
+    margin: 0 5px;
+    font-size: 11px;
+    color: white;
+    background-color: #726ff1;
+    text-decoration: underline;
+
+    &:checked {
+      text-decoration: none;
+    }
+  }
+}
+
+.form__label {
+  position: relative;
+  display: flex;
+  width: 100%;
+  margin-bottom: 10px;
+  align-items: center;
+  
+  &--meduim {
+    width: 50%;
+    margin-bottom: 20px;
+  }
+
+  @media (max-width: $desktop-width) {
+    flex-wrap: wrap;
+
+    &--meduim {
+      width: 100%;
+    }
+
+    &--ar {
+      justify-content: flex-end;
+    }
+  }
+
+}
+
+.form__input-title {
+  display: inline-block;
+  min-width: 130px;
+  padding: 0 10px;
+  margin-right: 20px;
+  order: 1;
+}
+
+.form__input {
+  height: 30px;
+  padding: 5px 10px;
+  flex-grow: 1;
+  font-size: 20px;
+  order: 2;
+  border: 1px solid gray;
+  
+  &--big {
+    height: 40px;
+  }
+
+  &--textarea {
+    height: 90px;
+  }
+}
+
+.form__button {
+  width: auto;
+  height: 30px;
+  background-color: #c3c4fb;
+  
+  @media (max-width: $desktop-width) {
+    height: 40px;
+    width: 100%;
+  }
+}
